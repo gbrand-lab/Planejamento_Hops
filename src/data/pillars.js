@@ -2,9 +2,9 @@ export const pillars = [
   {
     id: 'produto',
     name: 'Produto',
-    cadence: 'Fixo · toda quarta',
+    cadence: 'Fixo · toda semana, alternando quarta/domingo',
     kind: 'fixo',
-    desc: 'Chopp, rótulos autorais, lineup de estilos, taça e garrafa. Pilar que mais atrai e mais vende, entra toda semana sem alternância.',
+    desc: 'Chopp, rótulos autorais, lineup de estilos, taça e garrafa. Pilar que mais atrai e mais vende, entra toda semana sem falta — mas alterna entre quarta e domingo pra não cair sempre no mesmo dia.',
     expectation: 'Cada rótulo/chopp captado em sessão única: 6 ângulos de produto + 1 foto de consumo (mão segurando/brindando) + 1 foto de ambiente. Isso alimenta o feed do mês inteiro. Regra de marca: a cor de cada rótulo pode aparecer no post, mas o preto e o dourado da Hops Beer sempre presentes em algum elemento (overlay, moldura, tipografia), pra ninguém confundir o grid com o de outra cervejaria.',
   },
   {

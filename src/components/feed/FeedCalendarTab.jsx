@@ -4,8 +4,8 @@ import { apiUrl } from '../../api.js'
 import MonthGrid from './MonthGrid.jsx'
 import PostDrawer, { CLIENTE } from './PostDrawer.jsx'
 
-// Cada semana só tem 1 post por dia (segunda/quarta/sexta/domingo), mas
-// mantemos o agrupamento por número do dia pra caber posts extras no futuro.
+// A maioria dos dias tem 1 post, mas a sexta tem 2 (Música ao vivo +
+// complementar), então agrupamos por número do dia pra caber mais de um.
 function groupByDay(entries) {
   const map = new Map()
   for (const entry of entries) {
@@ -117,14 +117,17 @@ export default function FeedCalendarTab() {
         </div>
       </div>
       <p className="section-desc">
-        Cadência fixa de 4 posts por semana, sempre nos mesmos dias: segunda (fixado), quarta (Produto),
-        sexta (Música ao vivo) e domingo (Rotativo). Sem alternância de padrão, mesma estrutura toda
-        semana.
+        6 posts por semana, em 5 dias. Segunda é só o fixado com a programação. Terça e sexta levam um
+        post complementar que gira entre os pilares de conteúdo, e a sexta ainda tem o aviso de Música ao
+        vivo (único dia com 2 posts). Quarta e domingo alternam entre si a cada semana: numa semana
+        Produto entra na quarta e o Rotativo no domingo, na semana seguinte é o contrário. Produto
+        continua entrando toda semana, só não fica sempre no mesmo dia.
       </p>
       <p className="section-desc">
-        O pilar rotativo de domingo (Experiência → Bastidores → Institucional → Gastronomia →
-        Educacional) segue um ciclo de 5 semanas, contínuo entre setembro e outubro, ponto de partida
-        proposto, ajustável conforme a agenda real.
+        O pilar rotativo (Experiência, Bastidores, Institucional, Gastronomia, Educacional) também não
+        repete sempre a mesma ordem: cada volta de 5 semanas usa uma sequência diferente da anterior — a
+        partir da 6ª semana já embaralha, e a ordem só se repete de fato depois de 15 semanas. Ponto de
+        partida proposto, ajustável conforme a agenda real.
       </p>
       <p className="section-desc">
         Clique em qualquer dia para subir a foto do post com a legenda.

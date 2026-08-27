@@ -100,12 +100,30 @@ export const captureChecklist = [
     ],
   },
   {
+    id: 'terca-complementar',
+    title: 'Terça, post complementar',
+    items: [
+      'Post da terça: gira entre Educacional, Institucional, Experiência, Bastidores e Gastronomia',
+      'Reaproveita o banco de captação do pilar da vez, não exige sessão dedicada — só entra na conta de registros se o pilar precisar de material próprio naquele mês',
+      'Ordem defasada da rotativa da semana pra nunca cair o mesmo assunto na terça e no domingo/quarta',
+    ],
+  },
+  {
     id: 'musica',
     title: 'Música ao vivo, aviso',
     items: [
       'Foto/vídeo de palco + banda tocando, captação única durante o evento',
       'Post fixo de aviso toda sexta',
       'Precisa ser feito durante o evento à noite, não na visita diurna de captação',
+    ],
+  },
+  {
+    id: 'sexta-complementar',
+    title: 'Sexta, post complementar',
+    items: [
+      'Segundo post da sexta, além do aviso de música: gira entre Gastronomia, Experiência, Institucional, Educacional e Bastidores',
+      'Reaproveita o banco de captação do pilar da vez, não exige sessão dedicada — só entra na conta de registros se o pilar precisar de material próprio naquele mês',
+      'Ordem defasada da complementar de terça e da rotativa da semana pra os três nunca caírem no mesmo assunto',
     ],
   },
   {

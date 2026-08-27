@@ -19,10 +19,13 @@ export default function BriefingTab() {
           só olhando o grid. Aqui a cor do produto pode variar, a cor da marca não desaparece.
         </p>
         <p>
-          Cadência enxuta de <b>4 posts por semana</b>, sempre nos mesmos dias (segunda, quarta, sexta e
-          domingo), pra manter consistência sem exigir captação toda semana. Produto é fixo toda quarta,
-          Música ao vivo é fixo toda sexta; Experiência, Bastidores, Institucional, Gastronomia e
-          Educacional dividem o domingo, girando em ciclo de 5 semanas.
+          Cadência enxuta de <b>6 posts por semana</b>, em 5 dias (segunda, terça, quarta, sexta e
+          domingo), pra manter consistência sem exigir captação toda semana. Segunda é só o fixado com a
+          programação. Terça e sexta têm um post complementar que gira entre os pilares de conteúdo pra
+          dar mais volume, e a sexta ainda leva o aviso de Música ao vivo — os dois complementares e a
+          rotativa da semana sempre em pilares diferentes entre si. Quarta e domingo alternam a cada
+          semana entre Produto (que entra toda semana, sem falta) e o pilar rotativo — Experiência,
+          Bastidores, Institucional, Gastronomia e Educacional, girando em ciclo de 5 semanas.
         </p>
       </section>
 
@@ -47,8 +50,13 @@ export default function BriefingTab() {
           </div>
           <div className="format-card">
             <span className="format-num">1×</span>
-            <h3>Quarta · Produto</h3>
-            <p>Chopp, rótulo ou lineup da semana, sempre no mesmo dia, sem alternância.</p>
+            <h3>Terça · Complementar</h3>
+            <p>Post girando entre os pilares de conteúdo (Educacional, Institucional, Experiência, Bastidores, Gastronomia) numa ordem defasada da rotativa da semana, pra não repetir assunto. Reaproveita o banco de captação do pilar.</p>
+          </div>
+          <div className="format-card">
+            <span className="format-num">1×</span>
+            <h3>Quarta/Domingo · Produto</h3>
+            <p>Chopp, rótulo ou lineup da semana, entra toda semana sem falta, mas alternando entre quarta e domingo — não fica sempre no mesmo dia.</p>
           </div>
           <div className="format-card">
             <span className="format-num">1×</span>
@@ -57,13 +65,18 @@ export default function BriefingTab() {
           </div>
           <div className="format-card">
             <span className="format-num">1×</span>
-            <h3>Domingo · Rotativo</h3>
-            <p>Experiência, Bastidores, Institucional, Gastronomia ou Educacional, um por semana, em ciclo de 5 semanas.</p>
+            <h3>Sexta · Complementar</h3>
+            <p>Segundo post do dia, girando entre os pilares de conteúdo numa ordem defasada da complementar de terça e da rotativa da semana, pra os três nunca caírem no mesmo assunto. Reaproveita o banco de captação do pilar.</p>
+          </div>
+          <div className="format-card">
+            <span className="format-num">1×</span>
+            <h3>Quarta/Domingo · Rotativo</h3>
+            <p>Experiência, Bastidores, Institucional, Gastronomia ou Educacional, um por semana, em ciclo de 5 semanas — no dia (quarta ou domingo) que o Produto não estiver ocupando naquela semana.</p>
           </div>
           <div className="format-card">
             <span className="format-num">1×</span>
             <h3>Captação / mês</h3>
-            <p>Uma visita cobre as semanas de segunda/quarta/domingo do mês, mais a sessão noturna dos eventos de sexta. Executado por fotógrafo/social media dedicado.</p>
+            <p>Uma visita cobre os posts diurnos do mês (terça/quarta/domingo + o complementar de sexta), mais a sessão noturna dos eventos de música de sexta. Executado por fotógrafo/social media dedicado.</p>
           </div>
         </div>
       </section>
