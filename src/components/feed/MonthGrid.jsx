@@ -2,12 +2,12 @@ import { pillars, MONTH_NAME, WEEKDAY_HEADERS } from '../../data/index.js'
 
 const KIND_LABEL = { fixo: 'FIXO', rotativo: 'ROTATIVO', fixado: 'FIXADO' }
 
-function EntryChip({ entry }) {
+function EntryChip({ entry, post }) {
   const pillar = pillars.find((p) => p.id === entry.pillarId)
   return (
     <div className="cell-chip">
       <span className={`cell-unit cell-unit--${pillar.kind}`}>{KIND_LABEL[pillar.kind]}</span>
-      <span className="cell-pillar">{pillar.name}</span>
+      <span className="cell-pillar">{post?.nome || 'Sem nome definido'}</span>
       <span className="cell-format">{entry.format}</span>
     </div>
   )
@@ -59,7 +59,7 @@ export default function MonthGrid({ year, monthIndex, byDay, postsByDate = new M
                 {dayPosts.length > 0 && <span className="cell-photo-dot" title={`${dayPosts.length} foto(s) anexada(s)`} />}
               </span>
               {entries?.map((entry, i) => (
-                <EntryChip key={i} entry={entry} />
+                <EntryChip key={i} entry={entry} post={dayPosts[i]} />
               ))}
             </button>
           )

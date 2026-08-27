@@ -179,6 +179,7 @@ function ImageSection({ label, hint, images, onAdd, onRemove, onPreview, allowPa
 
 function PostPage({ date, post, onSave, onDelete, onCancel, onPreview, confirming }) {
   const [dataPost, setDataPost] = useState(post?.data ?? date)
+  const [nome, setNome] = useState(post?.nome ?? '')
   const [descricao, setDescricao] = useState(post?.descricao ?? '')
   const [referenciaImagens, setReferenciaImagens] = useState(post?.referenciaImagens ?? [])
   const [materialImagens, setMaterialImagens] = useState(post?.materialImagens ?? [])
@@ -195,6 +196,10 @@ function PostPage({ date, post, onSave, onDelete, onCancel, onPreview, confirmin
   }
 
   async function handleSave() {
+    if (!nome.trim()) {
+      setError('O nome do post é obrigatório.')
+      return
+    }
     if (!descricao.trim()) {
       setError('A legenda é obrigatória.')
       return
@@ -205,6 +210,7 @@ function PostPage({ date, post, onSave, onDelete, onCancel, onPreview, confirmin
       await onSave({
         data: dataPost,
         cliente: CLIENTE,
+        nome: nome.trim(),
         descricao: descricao.trim(),
         referenciaImagens,
         materialImagens,
@@ -246,6 +252,17 @@ function PostPage({ date, post, onSave, onDelete, onCancel, onPreview, confirmin
 
       <div className="post-page-columns">
         <div className="post-page-col">
+          <div className="field">
+            <label htmlFor={`nome-${post?.id ?? 'new'}`}>Nome do post</label>
+            <input
+              id={`nome-${post?.id ?? 'new'}`}
+              type="text"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              placeholder="Ex: Produto - Rótulo IPA"
+            />
+          </div>
+
           <div className="field">
             <label htmlFor={`copy-${post?.id ?? 'new'}`}>Copy</label>
             <textarea
